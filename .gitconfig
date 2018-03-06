@@ -4,7 +4,7 @@
 [core]
 	editor = emacs -nw
 [credential]
-	helper = store --file /home/artemiy/.git-credentials
+	helper = store --file ~/.git-credentials
 	helper = cache --timeout 30000
 [alias]
 	co = checkout
