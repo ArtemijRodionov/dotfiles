@@ -1,0 +1,18 @@
+[user]
+	email = wertins71@gmail.com
+	name = Artemiy Rodionov
+[core]
+	editor = emacs -nw
+[credential]
+	helper = store --file /home/artemiy/.git-credentials
+	helper = cache --timeout 30000
+[alias]
+	co = checkout
+	br = branch
+	st = status -s
+	d = diff --word-diff
+	dc = diff --cached
+	aa = add .
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %ad\\ %Creset%s%Cgreen\\ [%cn]" --decorate --date=short
+	fl = log -u
+	lt = log --graph --oneline --decorate --all
