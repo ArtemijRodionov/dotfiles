@@ -10,7 +10,8 @@ brew install \
      wget \
      gcc \
      curl \
-     python3
+     python3 \
+     watson
 
 brew cask install \
      iterm2 \
