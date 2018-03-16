@@ -21,7 +21,9 @@ brew cask install \
      java \
      docker \
      firefox \
-     torbrowser
+     torbrowser \
+     visual-studio-code
 
 brew install bash-completion
 echo "[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion" >> ~/.bash_profile
+echo 'export EDITOR="emacs -nw"' >> ~/.bash_profile
