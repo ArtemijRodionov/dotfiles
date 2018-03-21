@@ -22,7 +22,7 @@ brew cask install \
     shiftit \
     docker \
     emacs \
-    visual-studio-code \    
+    visual-studio-code \
     skype \
     telegram-desktop \
     firefox \
