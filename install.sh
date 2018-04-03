@@ -28,7 +28,9 @@ brew cask install \
     firefox \
     chromium \
     torbrowser \
-    java
+    java \
+    # utility for keyboard customization
+    karabiner-elements
 
 brew install bash-completion
 echo "[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion" >> ~/.bash_profile
