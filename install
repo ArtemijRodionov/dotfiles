@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -14,7 +14,8 @@ brew install \
     # time tracker
     watson \
     # file change monitor
-    fswatch
+    fswatch \
+    mpv
 
 brew cask install \
     iterm2 \
