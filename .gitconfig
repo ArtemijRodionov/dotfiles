@@ -1,6 +1,7 @@
 [user]
 	email = wertins71@gmail.com
 	name = Artemiy Rodionov
+	signingkey = FD324D7B495CF87A
 [core]
 	editor = emacs -nw
 [alias]
@@ -13,3 +14,5 @@
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %ad\\ %Creset%s%Cgreen\\ [%cn]" --decorate --date=short
 	fl = log -u
 	lt = log --graph --oneline --decorate --all
+[commit]
+	gpgsign = true

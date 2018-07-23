@@ -15,7 +15,10 @@ brew install \
     watson \
     # file change monitor
     fswatch \
-    mpv
+    # media player
+    mpv \
+    # paper backup for GPG
+    paperkey
 
 brew cask install \
     iterm2 \
@@ -36,6 +39,9 @@ brew cask install \
 
 brew install bash-completion
 
-echo "[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion" >> ~/.bash_profile
-echo 'export EDITOR="emacs -nw"' >> ~/.bash_profile
+echo "
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+export EDITOR='emacs -nw'
+" >> ~/.bash_profile
+echo "keyid-format long" >> ~/.gnupg/gpg.conf
 cp .emacs .gitconfig ~/
