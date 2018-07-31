@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew tap caskroom/cask
@@ -39,9 +41,4 @@ brew cask install \
 
 brew install bash-completion
 
-echo "
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-export EDITOR='emacs -nw'
-" >> ~/.bash_profile
-echo "keyid-format long" >> ~/.gnupg/gpg.conf
-cp .emacs .gitconfig ~/
+
