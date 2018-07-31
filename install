@@ -2,15 +2,6 @@
 
 set -e
 
-QUITE=false
-for arg in "$@"
-do
-    if [[ $arg = "--quite" || $arg = "-q" ]]
-    then
-        QUITE=true
-    fi
-done
-
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew tap caskroom/cask
@@ -49,12 +40,3 @@ brew cask install \
     karabiner-elements
 
 brew install bash-completion
-
-if ! $QUITE
-    then
-        read -p "Copy conf files?" yn
-        if [[ $yn = "y" || $yn = "yes" ]]
-        then
-            ./copy
-        fi
-fi
