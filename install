@@ -34,8 +34,6 @@ brew cask install \
     firefox \
     chromium \
     torbrowser \
-    java \
-    julia \
     # utility for keyboard customization
     karabiner-elements
 

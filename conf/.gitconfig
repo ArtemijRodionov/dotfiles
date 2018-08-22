@@ -12,7 +12,8 @@
 	dc = diff --cached
 	aa = add .
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %ad\\ %Creset%s%Cgreen\\ [%cn]" --decorate --date=short
-	fl = log -u
 	lt = log --graph --oneline --decorate --all
+	fl = log -u
+	cap = !git commit --amend --no-edit && git push -f origin HEAD
 [commit]
 	gpgsign = true
