@@ -21,7 +21,8 @@ brew install \
     # media player
     mpv \
     # paper backup for GPG
-    paperkey
+    paperkey \
+    tmux
 
 brew cask install \
     iterm2 \
@@ -46,3 +47,6 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # View Hidden Files
 defaults write com.apple.Finder AppleShowAllFiles YES
 killall Finder
+
+# copy dotfiles to HOME
+find src -name ".*" -type f -print | xargs -I {} cp {} ~/

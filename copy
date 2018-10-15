@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-cp conf/.emacs conf/.gitconfig conf/.bash_profile ~/
-cp conf/gpg.conf ~/.gnupg/gpg.conf
