@@ -29,7 +29,6 @@ brew cask install \
     # managing windows size and position
     shiftit \
     docker \
-    emacs \
     visual-studio-code \
     skype \
     telegram-desktop \

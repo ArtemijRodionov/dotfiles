@@ -1,6 +1,6 @@
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/Cellar/watson/1.5.2_1/etc/bash_completion.d/watson
-export EDITOR="emacs -nw"
+export EDITOR="vim"
 
 DRONE_TOKEN=$(security find-generic-password -a ${USER} -s drone_token -w)
 
