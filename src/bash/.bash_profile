@@ -9,7 +9,5 @@ function docker-rm() { docker rm $(docker ps -aq); }
 function docker-rmi-dangling() { docker rmi -f $(docker images --filter "dangling=true" -q); }
 function drone() { docker run --rm -it -e DRONE_SERVER=https://ci.fidals.com -e DRONE_TOKEN=$DRONE_TOKEN drone/cli "$@"; }
 
-# set vim keybinding mode
-set -o vi
 export EDITOR="vim"
 
