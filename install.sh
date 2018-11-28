@@ -45,7 +45,29 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 # View Hidden Files
 defaults write com.apple.Finder AppleShowAllFiles YES
-killall Finder
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Show Status bar in Finder"
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Show Path bar in Finder"
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Set a blazingly fast keyboard repeat rate"
+defaults write NSGlobalDomain KeyRepeat -int 0.02
+
+# Avoid creating .DS_Store files on network volumes"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Require password immediately after sleep or screen saver begins"
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Kill affected applications"
+for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
 
 # copy dotfiles to HOME
-find src -name ".*" -type f -print | xargs -I {} cp {} ~/
+find src -type f | sed 's/src\///' | xargs -I {} cp src/{} ~/{}
+
