@@ -16,7 +16,4 @@ alias diff="diff \
     --old-group-format=$'\e[0;31m%<\e[0m' \
     --new-group-format=$'\e[0;31m%>\e[0m' \
     --unchanged-group-format=$'\e[0;32m%=\e[0m'"
-if [[ ! $TERM =~ screen ]]; then
-    exec tmux
-fi
 

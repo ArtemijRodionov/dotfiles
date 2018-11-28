@@ -6,6 +6,11 @@ set ai
 set number
 set hlsearch
 set ruler
+set backspace=eol,start,indent
+
+" use systemwide clipboard
+set clipboard=unnamedplus
+
 highlight Comment ctermfg=green
 
 " keymap for command mode in russian layout
