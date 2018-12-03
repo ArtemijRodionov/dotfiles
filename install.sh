@@ -22,7 +22,10 @@ brew install \
     mpv \
     # paper backup for GPG
     paperkey \
-    tmux
+    tmux \
+    # conver markup formats
+    # it is used in JupyterLab
+    pandoc
 
 brew cask install \
     iterm2 \
