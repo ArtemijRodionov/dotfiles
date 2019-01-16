@@ -17,3 +17,5 @@ alias diff="diff \
     --new-group-format=$'\e[0;31m%>\e[0m' \
     --unchanged-group-format=$'\e[0;32m%=\e[0m'"
 
+source $HOME/.cargo/env
+
