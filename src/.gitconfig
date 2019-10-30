@@ -3,7 +3,7 @@
 	name = Artemiy Rodionov
 	signingkey = FD324D7B495CF87A
 [core]
-	editor = vim 
+	editor = vim
 	attributesFile = ~/.gitattributes
 [alias]
 	co = checkout

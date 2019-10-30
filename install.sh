@@ -18,14 +18,13 @@ brew install \
     watson \
     # file change monitor
     fswatch \
-    # media player
-    mpv \
     # paper backup for GPG
     paperkey \
     tmux \
     # conver markup formats
     # it is used in JupyterLab
-    pandoc
+    pandoc \
+    mplayer
 
 brew cask install \
     iterm2 \

@@ -7,8 +7,9 @@ set number
 set hlsearch
 set ruler
 set backspace=eol,start,indent
-
 highlight Comment ctermfg=green
+
+set spell spelllang=ru,en
 
 " keymap for command mode in russian layout
 " see this topic: http://vim.wikia.com/wiki/Using_Vim_key_bindings_while_typing_non-latin1_text
