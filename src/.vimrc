@@ -8,6 +8,8 @@ set hlsearch
 set ruler
 set backspace=eol,start,indent
 highlight Comment ctermfg=green
+highlight clear SpellBad 
+highlight SpellBad cterm=underline
 
 set spell spelllang=ru,en
 
