@@ -1,3 +1,6 @@
+set -o vi
+bind '"\C-g":vi-movement-mode'
+
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 DRONE_TOKEN=$(security find-generic-password -a ${USER} -s drone_token -w)
