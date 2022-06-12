@@ -72,6 +72,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Turn off annoying notification animation
 defaults write com.apple.dock no-bouncing -bool TRUE
 
+# Turn off OS update notification
+defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
+
 # Kill affected applications"
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
 
