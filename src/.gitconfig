@@ -1,10 +1,10 @@
 [user]
-	email = wertins71@gmail.com
+	email = wertins@yandex-team.ru
 	name = Artemiy Rodionov
-	signingkey = FD324D7B495CF87A
 [core]
 	editor = vim
 	attributesFile = ~/.gitattributes
+    pager = delta
 [alias]
 	co = checkout
 	br = branch
@@ -16,8 +16,18 @@
 	lt = log --graph --oneline --decorate --all
 	fl = log -u
 	cap = !git commit --amend --no-edit && git push -f origin HEAD
-[commit]
-	gpgsign = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    light = true
+    line-numbers = true
+    #side-by-side = true
+    navigate = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+
 [diff "bin"]
   textconv = hexdump -v -C
 [diff "zip"]
