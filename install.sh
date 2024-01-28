@@ -4,52 +4,30 @@ set -e
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew tap caskroom/cask
-brew tap caskroom/fonts
 brew tap homebrew/services
+brew tap homebrew/cask-fonts
 
 brew install \
-    git \
-    wget \
-    gcc \
-    curl \
-    python3 \
-    # time tracker
-    watson \
-    # file change monitor
-    fswatch \
-    # paper backup for GPG
-    paperkey \
+    go \
+    rust \
     tmux \
-    # conver markup formats
-    # it is used in JupyterLab
-    pandoc \
-    mplayer
+    fzf \
+    ripgrep \
+    grpcurl \
+    direnv \
+    jq \
+    gojq \
+    nvim \
+    helm \
+    helmfile \
 
 brew cask install \
     iterm2 \
-    # managing windows size and position
-    shiftit \
-    docker \
-    visual-studio-code \
-    skype \
-    telegram-desktop \
-    firefox \
-    chromium \
-    torbrowser \
-    # utility for keyboard customization
-    karabiner-elements
-
-brew install bash-completion
-
-# Allow key repeats
-defaults write -g ApplePressAndHoldEnabled -bool true
+    font-fira-code \
+    firefox
 
 # View Hidden Files
-defaults write com.apple.Finder AppleShowAllFiles YES
-
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
+defaults write com.apple.finder appleshowallfiles yes
 
 # Show Status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -57,17 +35,8 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Show Path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 2
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -int 0
-
 # Avoid creating .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-# Require password immediately after sleep
-# defaults write com.apple.screensaver askForPassword -int 1
-# defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Turn off annoying notification animation
 defaults write com.apple.dock no-bouncing -bool TRUE
