@@ -1,7 +1,12 @@
 # dotfiles
 My configs and unix stuff
 
-## Install:
+## How to
+Install dotfiles from repo
 ```bash
 ./install.sh
+```
+Collect dotfiles from system
+```bash
+./collect.sh
 ```
