@@ -3,6 +3,8 @@ local function opts(desc)
 end
 
 vim.g.mapleader = " "
+vim.keymap.set("n", "[b", ":bprev<CR>", opts("Buffer previous"))
+vim.keymap.set("n", "]b", ":bnext<CR>", opts("Buffer next"))
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, opts("Project Ex"))
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts("Move selected Up"))
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts("Move selected Down"))
@@ -24,4 +26,3 @@ vim.keymap.set("n", "<leader>Y", "\"+Y", opts("Copy to clipboard line"))
 -- commands
 vim.keymap.set("n", "<leader>pS", "<cmd>silent !tmux neww tmux-sessionizer<CR>", opts("Select project"))
 vim.keymap.set("n", "<leader>cx", "<cmd>!chmod +x %<CR>", opts("Chmod +x"))
-

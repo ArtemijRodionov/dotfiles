@@ -17,9 +17,9 @@ brew install \
     direnv \
     jq \
     gojq \
+    git-delta \
     nvim \
-    helm \
-    helmfile \
+    helm
 
 brew cask install \
     iterm2 \
