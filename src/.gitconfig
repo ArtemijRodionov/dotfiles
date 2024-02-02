@@ -1,10 +1,15 @@
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
 [user]
-	email = wertins@yandex-team.ru
-	name = Artemiy Rodionov
+	email = wertins71@gmail.com
+	name = Artemij Rodionov
 [core]
-	editor = vim
+	editor = nvim
 	attributesFile = ~/.gitattributes
     pager = delta
+	quotepath = off
+[include]
+    path = ~/.gitconfig.nebo
 [alias]
 	co = checkout
 	br = branch
@@ -54,3 +59,12 @@
 [diff "tar-xz"]
   textconv = tar -O -xJf
   binary = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = trunk

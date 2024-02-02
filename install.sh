@@ -19,7 +19,8 @@ brew install \
     gojq \
     git-delta \
     nvim \
-    helm
+    helm \
+    protobuf
 
 brew cask install \
     iterm2 \
