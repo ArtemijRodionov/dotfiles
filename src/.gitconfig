@@ -1,38 +1,36 @@
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
 [user]
 	email = wertins71@gmail.com
 	name = Artemij Rodionov
 [core]
 	editor = nvim
 	attributesFile = ~/.gitattributes
-    pager = delta
+  pager = delta
 	quotepath = off
-[include]
-    path = ~/.gitconfig.nebo
 [alias]
 	co = checkout
 	br = branch
 	st = status -s
-	d = diff --word-diff
-	dc = diff --cached
-	aa = add .
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %ad\\ %Creset%s%Cgreen\\ [%cn]" --decorate --date=short
-	lt = log --graph --oneline --decorate --all
-	fl = log -u
-	cap = !git commit --amend --no-edit && git push -f origin HEAD
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 [delta]
-    light = true
-    line-numbers = true
-    #side-by-side = true
-    navigate = true
+  light = true
+  line-numbers = true
+  navigate = true
 [merge]
-    conflictstyle = diff3
+  conflictstyle = diff3
 [diff]
-    colorMoved = default
-
+  colorMoved = default
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = trunk
+[rerere]
+	enabled = true
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[includeIf "gitdir:~/dev/nebo"]
+  path = ~/.gitconfig.nebo
 [diff "bin"]
   textconv = hexdump -v -C
 [diff "zip"]
@@ -64,7 +62,5 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-[push]
-	autoSetupRemote = true
-[init]
-	defaultBranch = trunk
+[branch]
+	sort = -committerdate

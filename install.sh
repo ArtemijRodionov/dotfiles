@@ -21,7 +21,8 @@ brew install \
 	nvim \
 	helm \
 	protobuf \
-	k9s
+	k9s \
+	podman
 
 brew cask install \
 	iterm2 \

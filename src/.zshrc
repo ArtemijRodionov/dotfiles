@@ -150,9 +150,3 @@ function mov2gif {
     ffmpeg -i $1 -threads 0 -filter_complex "[0:v] fps=12" -f gif $2;
 }
 
-alias grep="grep --color=always"
-alias diff="diff \
-    --old-group-format=$'\e[0;31m%<\e[0m' \
-    --new-group-format=$'\e[0;31m%>\e[0m' \
-    --unchanged-group-format=$'\e[0;32m%=\e[0m'"
-
