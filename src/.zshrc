@@ -112,6 +112,8 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="/usr/local/Cellar/go/1.21.6/bin:$PATH"
 export PATH="$PATH:$(go env GOPATH)/bin"
 
+#export GOPACKAGESDRIVER=~/dev/nebo/nebazel/tools/mygopackagesdriver.sh
+
 # The next line updates PATH for Yandex Cloud CLI.
 if [ -f '/Users/wertins/yandex-cloud/path.bash.inc' ]; then source '/Users/wertins/yandex-cloud/path.bash.inc'; fi
 
@@ -150,3 +152,31 @@ function mov2gif {
     ffmpeg -i $1 -threads 0 -filter_complex "[0:v] fps=12" -f gif $2;
 }
 
+export PATH=$PATH:/Users/wertins/.temporalio/bin
+export PATH=$PATH:/Users/wertins/dev/nebo/
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export PATH=$JAVA_HOME/bin:$PATH
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+#         . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda initialize <<<
+
+
+# The next line updates PATH for Nebius CLI.
+if [ -f '/Users/wertins/.nebius/path.bash.inc' ]; then source '/Users/wertins/.nebius/path.bash.inc'; fi
+# The next line enables shell command completion for Nebius CLI.
+if [ -f '/Users/wertins/.nebius/completion.zsh.inc' ]; then source '/Users/wertins/.nebius/completion.zsh.inc'; fi
